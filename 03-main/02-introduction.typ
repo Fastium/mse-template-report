@@ -141,7 +141,7 @@ fn main() {
   caption:"First part of the USS-Rustacean code",
 )
 or directly from a file
-#let code_sample = read("/resources/code/uss-rustacean.rs")
+#let code_sample = read("/01-resources/code/uss-rustacean.rs")
 #figure(
   sourcecode()[
     #raw(code_sample, lang: "rust")
