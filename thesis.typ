@@ -2,8 +2,9 @@
 // Description: Main document to stitch everything together
 //
 #import "/metadata.typ": *
-#import "/tail/bibliography.typ": *
-#import "/tail/glossary.typ": *
+#import "/02-tail/bibliography.typ": *
+#import "/02-tail/glossary.typ": *
+#import "/00-lib/mse-title-page.typ": *
 #show:make-glossary
 #register-glossary(entry-list)
 
@@ -13,27 +14,30 @@
 #show: thesis.with(
   option: option,
   doc: doc,
-  data-page: data-page,
-  summary-page: summary-page,
   professor: professor,
   expert: expert,
   school: school,
   date: date,
   tableof: tableof,
-  logos: logos,
+  custom-title-page: mse-title-page,
+
 )
+//-------------------------------------
+// Setup pages (header, footer)
+//
+
 
 //-------------------------------------
 // Content
 //
-#include("/main/00-acknowledgements.typ")
-#include "/main/01-abstract.typ"
-#include "/main/02-introduction.typ"
-#include "/main/03-analysis.typ"
-#include "/main/04-design.typ"
-#include "/main/05-implementation.typ"
-#include "/main/06-validation.typ"
-#include "/main/07-conclusion.typ"
+#include("/03-main/00-acknowledgements.typ")
+#include "/03-main/01-abstract.typ"
+#include "/03-main/02-introduction.typ"
+#include "/03-main/03-analysis.typ"
+#include "/03-main/04-design.typ"
+#include "/03-main/05-implementation.typ"
+#include "/03-main/06-validation.typ"
+#include "/03-main/07-conclusion.typ"
 
 //-------------------------------------
 // Glossary
