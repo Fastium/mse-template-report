@@ -4,6 +4,9 @@
 
 #import "/metadata.typ": *
 
+#let l = {
+  line(length: 100%, stroke: 0.5pt)
+}
 
 #let mse-title-page = {
   set page(
@@ -19,46 +22,61 @@
   align(center)[
     #logos.logo-hesso
 
-    #v(0.5cm)
+    #v(1cm)
 
     #logos.logo-mse
 
     #v(1cm)
 
-    #text(doc.title, size:30pt)
-    #v(2cm)
-    #text(size:25pt)[
-      Master of Science in Engineering
-    ]
-    #v(0.3cm)
     #text(size:20pt)[
       #school.orientation
     ]
+
     #v(0.5cm)
-    #text(size:15pt)[
-      Date of publication #date.submission.display()
+
+    #text(doc.title, size:30pt)
+
+    #v(0.5cm)
+
+    #text(doc.subtitle, size:24pt)
+
+    #v(0.5cm)
+
+    #text(size:22pt, doc.author.name)
+  ]
+
+  v(2cm)
+
+  grid(
+    columns: (1fr, 1fr),
+    align: left + horizon,
+
+    text(size:12pt)[
+
+      #if professor != none [
+        Professor: \
+        - #professor.name
+        - #professor.email
+        - #professor.affiliation
+      ]
+    ],
+
+    text(size:12pt)[
+
+      #if expert != none [
+        Expert: \
+        - #expert.name
+        - #expert.email
+        - #expert.affiliation
+      ]
     ]
-  ]
+  )
 
-  v(3cm)
-  text(size:12pt)[
-    _*Produced by*_
-  ]
+  v(1cm)
 
-  v(0.5cm)
-
-  text(size:22pt)[
-    #h(1cm)
-    Author #doc.author.name
-  ]
-
-  v(0.5cm)
-
-  text(size:12pt)[
-    #h(1cm)
-    Under the supervision of #professor.name \
-    #h(1cm)
-    In collaboration with #professor.affiliation
+  text(size:15pt)[
+    _Submission date of the report_ \
+    #date.submission.display()
   ]
 
 }

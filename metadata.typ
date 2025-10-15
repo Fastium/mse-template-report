@@ -23,52 +23,40 @@
 // Metadata of the document
 //
 #let doc= (
-  title    : "Thesis Template",
+  title    : "Title",
   subtitle : "Longer Subtitle",
   author: (
     gender      : "masculin",  // ["masculin"|"feminin"|"inclusive"]
     name        : "Firstname Lastname",
     email       : "firstname.lastname@hevs.ch",
-    degree      : "Bachelor",
-    affiliation : "HEI-Vs",
-    place       : "Sion",
-    url         : "https://synd.hevs.io",
+    degree      : "degree",
+    affiliation : "affiliation",
+    place       : "place",
+    url         : "https://website.com",
     signature   : image("/01-resources/official/signature.svg", width:3cm),
   ),
-  keywords : ("HEI-Vs", "Systems Engineering", "Infotronics", "Thesis", "Template"),
+  keywords : ("keywords 1", "keywords 2","keywords 3","keywords 4",),
   version  : "v0.1.0",
 )
 
 #let professor= (
-  affiliation: "HEI-Vs",
-  name: "Prof. Silvan Zahno",
-  email: "silvan.zahno@hevs.ch",
+  affiliation: "affiliation",
+  name: "Prof. Firstname Lastname",
+  email: "firstname.lastname@nanana.ch",
 )
+
 #let expert= (
-  affiliation: "Company",
-  name: "Expert Name",
-  email: "expert@domain.ch",
+  affiliation: "affiliation",
+  name: "Prof. Firstname Lastname",
+  email: "firstname.lastname@nanana.ch",
 )
+
 #let school= (
-  name: none,
-  orientation: none,
-  specialisation: none,
+  name: "University of Applied Sciences Western Switzerland, Master MSE",
+  shortname: "Master MSE",
+  orientation: "orientation",
+  specialisation: "specialisation",
 )
-#if option.lang == "de" {
-  school.name = "Hochschule für Ingenieurwissenschaften Wallis, HES-SO"
-  school.orientation = "Systemtechnik"
-  school.specialisation = "Infotronics"
-} else if option.lang == "fr" {
-  school.name = "Haute École d'Ingénierie du Valais, HES-SO"
-  school.shortname = "HEI-Vs"
-  school.orientation = "Systèmes industriels"
-  school.specialisation = "Infotronics"
-} else {
-  school.name = "University of Applied Sciences Western Switzerland, Master MSE"
-  school.shortname = "Master MSE"
-  school.orientation = "Systems Engineering"
-  school.specialisation = "Infotronics"
-}
 
 #let date = (
   submission: datetime(year: 2025, month: 8, day: 14),
