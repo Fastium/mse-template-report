@@ -12,3 +12,32 @@ Then you need to install [just](https://github.com/casey/just) and copy the pack
 ```terminal
 just copy-preview
 ```
+## Update template
+Add a new remote.
+```terminal
+git remote add template git@github.com:Fastium/mse-template-report.git
+```
+Disable to push on the new remote.
+```terminal
+git remote set-url --push template no_push
+```
+
+Configure the git pull.
+```terminal
+git config pull.rebase true
+```
+
+Then update
+```terminal
+git fetch template
+git pull template
+```
+You can solve the conflicts with the rebase.
+Then add the file changed.
+```terminal
+git add your_file
+```
+Then apply your change on your own repository
+```terminal
+git rebase --continue
+```
