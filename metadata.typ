@@ -51,6 +51,12 @@
   email: "firstname.lastname@nanana.ch",
 )
 
+#let collaboration= (
+  company: "Company",
+  location: "Lausanne, CH",
+  website: "website.com"
+)
+
 #let school= (
   name: "University of Applied Sciences Western Switzerland, Master MSE",
   shortname: "Master MSE",
@@ -68,9 +74,9 @@
   confidential: image("/01-resources/hes-so/confidential.png", width: 6cm),
   logo-hesso: image("/01-resources/hes-so/logo-hesso.png", width: 5cm),
   logo-hesso-master: image("/01-resources/hes-so/logo-hesso-master.jpg", width: 3cm),
-  logo-mse: image("/01-resources/hes-so/logo-mse.png", width: 16cm),
-  logo-square-up-right: image("/01-resources/hes-so/square-style-up.png", width: 2cm),
-  logo-square-bottom-left: image("/01-resources/hes-so/square-style-bottom.png", width: 2cm)
+  logo-mse: image("/01-resources/hes-so/logo-mse.png", width: 14cm),
+  logo-square-up-right: image("/01-resources/hes-so/square-style-up.png", width: 1cm),
+  logo-square-bottom-left: image("/01-resources/hes-so/square-style-bottom.png", width: 1cm)
   )
 )
 

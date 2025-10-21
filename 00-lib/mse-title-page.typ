@@ -19,8 +19,14 @@
   //-------------------------------------
   // Page content
   //
+  grid(
+    columns: 2,
+    gutter: 100%,
+    logos.logo-hesso,
+    logos.logo-square-up-right
+  )
+  
   align(center)[
-    #logos.logo-hesso
 
     #v(1cm)
 
@@ -71,12 +77,21 @@
       ]
     ]
   )
-
+  if collaboration != none {
+    text(size:12pt)[
+      In collaboration with #collaboration.company in #collaboration.location \
+      Website: #link(collaboration.website)
+    ]
+  }
   v(1cm)
 
   text(size:15pt)[
     _Submission date of the report_ \
     #date.submission.display()
+  ]
+
+  align(left + bottom)[
+    #logos.logo-square-bottom-left
   ]
 
 }
